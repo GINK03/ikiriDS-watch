@@ -45,9 +45,9 @@ def runner():
 
 if __name__ == '__main__':
   try:
-    api_key = '8KRoh3ZP2zWJ5CnLqRuWvfFWL'
+    api_key = os.environ['TWITTER_API']
     api_sec = os.environ['TWITTER_API_SEC']
-    access_token = '2343754692-rOsQybI8qWkMzLECPyuSzOYIxM4z7tVv8PqYbnu'
+    access_token = os.environ['TWITTER_ACCESS_TOKEN']
     access_token_sec = os.environ['TWITTER_ACCESS_TOKEN_SEC']
     auth = tweepy.OAuthHandler(api_key, api_sec)
     auth.set_access_token(access_token, access_token_sec)
