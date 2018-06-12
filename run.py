@@ -11,11 +11,14 @@ import os
 import requests
 
 def checker(triples):
+  '''format rules
+  https://twitter.com/nardtree/status/1006325372307161089 が直URLで、username + idで構成されている
+  '''
   NGs = ['何かのイキリ語', 'クソ', 'ザコ']
   url = os.environ['SLACK_WEBHOOK_01']
-  for name, create_at, text in triples:
+  for name, create_at, text, tweetid in triples:
     #if any( [ ng in text for ng in NGs ] ):
-    context = f'''{name} sanが、{create_at}に、{text}　という発言をしています。'''
+    context = f'''{name} sanが、{create_at} \n https://twitter.com/{name}/status/{tweetid}'''
     payload = {'text':context, "channel": "#ikirids"}
     print( payload )
     requests.post(url, data=json.dumps(payload) )
@@ -23,12 +26,14 @@ def checker(triples):
 def runner():
   print( 'called at', datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') )
   
-  triples = []
+  quads = []
   for member in tweepy.Cursor(api.list_members, 'Seed57_cash', 'ikirids1').items():
     obj = (member._json)
+    pp.pprint( obj )
     name = obj['screen_name']
     create_at = obj['status']['created_at']
     text = obj['status']['text']
+    tweetid = obj['status']['id']
     key = sha256(bytes(f'{name} {create_at}', 'utf-8')).hexdigest()
 
     serialized = json.dumps(obj, indent=2, ensure_ascii=False)
@@ -39,8 +44,8 @@ def runner():
     with Path(f'logs/{key}').open('w') as f:
       f.write( serialized ) 
     print( name, create_at, text )
-    triples.append( (name, create_at, text) )
-  checker( triples )
+    quads.append( (name, create_at, text, tweetid) )
+  checker( quads )
 
 
 if __name__ == '__main__':
