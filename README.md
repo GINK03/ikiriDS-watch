@@ -9,5 +9,5 @@ Twitter API, Python3, Slack API
 
 ## 動作イメージ
 <div align="center">
-  <img width="750px" src="https://user-images.githubusercontent.com/4949982/41213003-3cf4d86c-6d7d-11e8-9421-81363eaa0ca3.png"> 
+  <img width="750px" src="https://user-images.githubusercontent.com/4949982/41266481-fa5797e6-6e31-11e8-8f69-526b78053f7d.png"> 
 </div>
