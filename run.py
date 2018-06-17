@@ -24,48 +24,46 @@ def checker(triples):
     requests.post(url, data=json.dumps(payload) )
 
 def runner():
-  print( 'called at', datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') )
-  
-  quads = []
-  for member in tweepy.Cursor(api.list_members, 'Seed57_cash', 'ikirids1').items():
-    obj = (member._json)
-    #pp.pprint( obj )
-    name = obj['screen_name']
-    create_at = obj['status']['created_at']
-    text = obj['status']['text']
-    tweetid = obj['status']['id']
-    key = sha256(bytes(f'{name} {create_at}', 'utf-8')).hexdigest()
+  try:
+    print( 'called at', datetime.datetime.now().strftime('%Y/%m/%d %H:%M:%S') )
+    
+    quads = []
+    for member in tweepy.Cursor(api.list_members, 'Seed57_cash', 'ikirids1').items():
+      obj = (member._json)
+      #p8p.pprint( obj )
+      name = obj['screen_name']
+      create_at = obj['status']['created_at']
+      text = obj['status']['text']
+      tweetid = obj['status']['id']
+      key = sha256(bytes(f'{name} {create_at}', 'utf-8')).hexdigest()
 
-    serialized = json.dumps(obj, indent=2, ensure_ascii=False)
+      serialized = json.dumps(obj, indent=2, ensure_ascii=False)
 
-    if Path(f'logs/{key}').exists():
-      continue
+      if Path(f'logs/{key}').exists():
+        continue
 
-    with Path(f'logs/{key}').open('w') as f:
-      f.write( serialized ) 
-    print( name, create_at, text )
-    quads.append( (name, create_at, text, tweetid) )
-  checker( quads )
-
+      with Path(f'logs/{key}').open('w') as f:
+        f.write( serialized ) 
+      print( name, create_at, text )
+      quads.append( (name, create_at, text, tweetid) )
+    checker( quads )
+  except Exception as ex:
+    print(ex)
+    return
 
 if __name__ == '__main__':
-  while True:
-    try:
-      api_key = os.environ['TWITTER_API']
-      api_sec = os.environ['TWITTER_API_SEC']
-      access_token = os.environ['TWITTER_ACCESS_TOKEN']
-      access_token_sec = os.environ['TWITTER_ACCESS_TOKEN_SEC']
-      auth = tweepy.OAuthHandler(api_key, api_sec)
-      auth.set_access_token(access_token, access_token_sec)
-      api = tweepy.API(auth)
-      schedule.every(3).minutes.do(runner)
-      
-      # run at first 
-      runner()
-      while True:
-        schedule.run_pending()
-        time.sleep(1)
+    api_key = os.environ['TWITTER_API']
+    api_sec = os.environ['TWITTER_API_SEC']
+    access_token = os.environ['TWITTER_ACCESS_TOKEN']
+    access_token_sec = os.environ['TWITTER_ACCESS_TOKEN_SEC']
+    auth = tweepy.OAuthHandler(api_key, api_sec)
+    auth.set_access_token(access_token, access_token_sec)
+    api = tweepy.API(auth)
+    schedule.every(3).minutes.do(runner)
+    
+    # run at first 
+    runner()
+    while True:
+      schedule.run_pending()
+      time.sleep(1)
 
-    except Exception as ex:
-      print(ex)
-      time.sleep(180.)
