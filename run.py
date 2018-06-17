@@ -29,7 +29,7 @@ def runner():
   quads = []
   for member in tweepy.Cursor(api.list_members, 'Seed57_cash', 'ikirids1').items():
     obj = (member._json)
-    pp.pprint( obj )
+    #pp.pprint( obj )
     name = obj['screen_name']
     create_at = obj['status']['created_at']
     text = obj['status']['text']
@@ -49,22 +49,23 @@ def runner():
 
 
 if __name__ == '__main__':
-  try:
-    api_key = os.environ['TWITTER_API']
-    api_sec = os.environ['TWITTER_API_SEC']
-    access_token = os.environ['TWITTER_ACCESS_TOKEN']
-    access_token_sec = os.environ['TWITTER_ACCESS_TOKEN_SEC']
-    auth = tweepy.OAuthHandler(api_key, api_sec)
-    auth.set_access_token(access_token, access_token_sec)
-    api = tweepy.API(auth)
-    schedule.every(3).minutes.do(runner)
-    
-    # run at first 
-    runner()
-    while True:
-      schedule.run_pending()
-      time.sleep(1)
+  while True:
+    try:
+      api_key = os.environ['TWITTER_API']
+      api_sec = os.environ['TWITTER_API_SEC']
+      access_token = os.environ['TWITTER_ACCESS_TOKEN']
+      access_token_sec = os.environ['TWITTER_ACCESS_TOKEN_SEC']
+      auth = tweepy.OAuthHandler(api_key, api_sec)
+      auth.set_access_token(access_token, access_token_sec)
+      api = tweepy.API(auth)
+      schedule.every(3).minutes.do(runner)
+      
+      # run at first 
+      runner()
+      while True:
+        schedule.run_pending()
+        time.sleep(1)
 
-  except Exception as ex:
-    print(ex)
-    time.sleep(1)
+    except Exception as ex:
+      print(ex)
+      time.sleep(180.)
