@@ -9,19 +9,25 @@ import datetime
 import schedule
 import os
 import requests
+import MeCab 
+
+m = MeCab.Tagger('-Owakati')
+NGs = json.load(fp=open('vocab_filter/vocs.json'))
+[ NGs.append(x) for x in ['何かのイキリ語', 'クソ', 'ザコ'] ]
+NGs = set(NGs)
 
 def checker(triples):
   '''format rules
   https://twitter.com/nardtree/status/1006325372307161089 が直URLで、username + idで構成されている
   '''
-  NGs = ['何かのイキリ語', 'クソ', 'ザコ']
   url = os.environ['SLACK_WEBHOOK_01']
   for name, create_at, text, tweetid in triples:
-    #if any( [ ng in text for ng in NGs ] ):
-    context = f'''{name} sanが、{create_at} \n https://twitter.com/{name}/status/{tweetid}'''
-    payload = {'text':context, "channel": "#ikirids"}
-    print( payload )
-    requests.post(url, data=json.dumps(payload) )
+    if len( set(m.parse(text).strip()) & NGs ) >= 1 :
+      context = f'''{name} sanが、{create_at} \n https://twitter.com/{name}/status/{tweetid}'''
+      payload = {'text':context, "channel": "#ikirids"}
+      print( payload )
+      print( text, set(m.parse(text).strip()) & NGs )
+      requests.post(url, data=json.dumps(payload) )
 
 def runner():
   try:
