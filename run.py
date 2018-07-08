@@ -23,10 +23,11 @@ def checker(triples):
   url = os.environ['SLACK_WEBHOOK_01']
   for name, create_at, text, tweetid in triples:
     if len( set(m.parse(text).strip()) & NGs ) >= 1 :
-      context = f'''{name} sanが、{create_at} \n https://twitter.com/{name}/status/{tweetid}'''
+      swords = str( set(m.parse(text).strip()) & NGs )
+      context = f'''{name} sanが、{create_at} \n センシティブワードは{swords}です \n https://twitter.com/{name}/status/{tweetid}'''
       payload = {'text':context, "channel": "#ikirids"}
       print( payload )
-      print( text, set(m.parse(text).strip()) & NGs )
+      print( text )
       requests.post(url, data=json.dumps(payload) )
 
 def runner():
