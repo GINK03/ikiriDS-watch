@@ -1,0 +1,111 @@
+{
+  "id": 97237303,
+  "id_str": "97237303",
+  "name": "Yusuke Uchida",
+  "screen_name": "yu4u",
+  "location": "東京都駒込",
+  "description": "AI research engineer at DeNA. Interested in deep learning, image recognition, image retrieval, and so forth. Spent a lot of time on Twitter.",
+  "url": "https://t.co/52wmGXkPcY",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "url": "https://t.co/52wmGXkPcY",
+          "expanded_url": "https://yu4u.github.io/",
+          "display_url": "yu4u.github.io",
+          "indices": [
+            0,
+            23
+          ]
+        }
+      ]
+    },
+    "description": {
+      "urls": []
+    }
+  },
+  "protected": false,
+  "followers_count": 2718,
+  "friends_count": 886,
+  "listed_count": 133,
+  "created_at": "Wed Dec 16 16:06:09 +0000 2009",
+  "favourites_count": 5764,
+  "utc_offset": null,
+  "time_zone": null,
+  "geo_enabled": true,
+  "verified": false,
+  "statuses_count": 16482,
+  "lang": "ja",
+  "status": {
+    "created_at": "Mon Jul 09 09:23:06 +0000 2018",
+    "id": 1016251389184364544,
+    "id_str": "1016251389184364544",
+    "text": "@murawaki こちらの表現ではないでしょうか https://t.co/QREWKqAhkq",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "murawaki",
+          "name": "Murawaki",
+          "id": 34173398,
+          "id_str": "34173398",
+          "indices": [
+            0,
+            9
+          ]
+        }
+      ],
+      "urls": [
+        {
+          "url": "https://t.co/QREWKqAhkq",
+          "expanded_url": "http://www.ttic.edu/dl/dark14.pdf",
+          "display_url": "ttic.edu/dl/dark14.pdf",
+          "indices": [
+            26,
+            49
+          ]
+        }
+      ]
+    },
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+    "in_reply_to_status_id": 1016248398003834880,
+    "in_reply_to_status_id_str": "1016248398003834880",
+    "in_reply_to_user_id": 34173398,
+    "in_reply_to_user_id_str": "34173398",
+    "in_reply_to_screen_name": "murawaki",
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "ja"
+  },
+  "contributors_enabled": false,
+  "is_translator": false,
+  "is_translation_enabled": false,
+  "profile_background_color": "C0DEED",
+  "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+  "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+  "profile_background_tile": false,
+  "profile_image_url": "http://pbs.twimg.com/profile_images/1304537484/1_normal.png",
+  "profile_image_url_https": "https://pbs.twimg.com/profile_images/1304537484/1_normal.png",
+  "profile_link_color": "1DA1F2",
+  "profile_sidebar_border_color": "C0DEED",
+  "profile_sidebar_fill_color": "DDEEF6",
+  "profile_text_color": "333333",
+  "profile_use_background_image": true,
+  "has_extended_profile": false,
+  "default_profile": true,
+  "default_profile_image": false,
+  "following": true,
+  "follow_request_sent": false,
+  "notifications": false,
+  "translator_type": "regular"
+}

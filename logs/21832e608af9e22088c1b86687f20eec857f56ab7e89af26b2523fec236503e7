@@ -1,0 +1,120 @@
+{
+  "id": 2343754692,
+  "id_str": "2343754692",
+  "name": "☔️⚡️",
+  "screen_name": "nardtree",
+  "location": "Load of Cynder",
+  "description": "興味:機械学習, Python, Rust, Kotlin, 表現とアート | ブログとか https://t.co/fFhLEvLOJy | MLエンジニア👩‍💻とニートを繰り返しています | INTJ | 質問箱📦 https://t.co/KFeNedBpIm | お話ししましょう",
+  "url": "https://t.co/XhdcRUcS8N",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "url": "https://t.co/XhdcRUcS8N",
+          "expanded_url": "http://gink03.github.io",
+          "display_url": "gink03.github.io",
+          "indices": [
+            0,
+            23
+          ]
+        }
+      ]
+    },
+    "description": {
+      "urls": [
+        {
+          "url": "https://t.co/fFhLEvLOJy",
+          "expanded_url": "http://catindog.hatenablog.com/",
+          "display_url": "catindog.hatenablog.com",
+          "indices": [
+            46,
+            69
+          ]
+        },
+        {
+          "url": "https://t.co/KFeNedBpIm",
+          "expanded_url": "http://peing.net/nardtree",
+          "display_url": "peing.net/nardtree",
+          "indices": [
+            110,
+            133
+          ]
+        }
+      ]
+    }
+  },
+  "protected": false,
+  "followers_count": 5422,
+  "friends_count": 1054,
+  "listed_count": 143,
+  "created_at": "Fri Feb 14 15:44:22 +0000 2014",
+  "favourites_count": 38549,
+  "utc_offset": null,
+  "time_zone": null,
+  "geo_enabled": true,
+  "verified": false,
+  "statuses_count": 29935,
+  "lang": "en",
+  "status": {
+    "created_at": "Tue Jul 10 01:57:35 +0000 2018",
+    "id": 1016501656823873536,
+    "id_str": "1016501656823873536",
+    "text": "@TrsNium なるほど、生やすの良さそう",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "TrsNium",
+          "name": "タロス",
+          "id": 738249392574976000,
+          "id_str": "738249392574976000",
+          "indices": [
+            0,
+            8
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": 1016500177538957312,
+    "in_reply_to_status_id_str": "1016500177538957312",
+    "in_reply_to_user_id": 738249392574976000,
+    "in_reply_to_user_id_str": "738249392574976000",
+    "in_reply_to_screen_name": "TrsNium",
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 0,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "ja"
+  },
+  "contributors_enabled": false,
+  "is_translator": false,
+  "is_translation_enabled": false,
+  "profile_background_color": "000000",
+  "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+  "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+  "profile_background_tile": false,
+  "profile_image_url": "http://pbs.twimg.com/profile_images/1014182397913358336/HK0aaiy6_normal.jpg",
+  "profile_image_url_https": "https://pbs.twimg.com/profile_images/1014182397913358336/HK0aaiy6_normal.jpg",
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/2343754692/1529744622",
+  "profile_link_color": "FFCC4D",
+  "profile_sidebar_border_color": "000000",
+  "profile_sidebar_fill_color": "000000",
+  "profile_text_color": "000000",
+  "profile_use_background_image": false,
+  "has_extended_profile": false,
+  "default_profile": false,
+  "default_profile_image": false,
+  "following": false,
+  "follow_request_sent": false,
+  "notifications": false,
+  "translator_type": "none"
+}

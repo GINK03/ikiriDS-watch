@@ -1,0 +1,215 @@
+{
+  "id": 232104486,
+  "id_str": "232104486",
+  "name": "まますたん",
+  "screen_name": "mamas16k",
+  "location": "kgs",
+  "description": "シナモン/囲碁(東洋7段, kgs6d)/運営: @igokgs_english /廃墟/sm64 hack /wot /python, R, cpp /kaggle, opt",
+  "url": "https://t.co/KihWKS2Iqd",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "url": "https://t.co/KihWKS2Iqd",
+          "expanded_url": "http://kaggle.com/mamasinkgs",
+          "display_url": "kaggle.com/mamasinkgs",
+          "indices": [
+            0,
+            23
+          ]
+        }
+      ]
+    },
+    "description": {
+      "urls": []
+    }
+  },
+  "protected": false,
+  "followers_count": 1185,
+  "friends_count": 1579,
+  "listed_count": 32,
+  "created_at": "Thu Dec 30 07:28:03 +0000 2010",
+  "favourites_count": 4753,
+  "utc_offset": null,
+  "time_zone": null,
+  "geo_enabled": true,
+  "verified": false,
+  "statuses_count": 37291,
+  "lang": "ja",
+  "status": {
+    "created_at": "Mon Jul 09 13:03:35 +0000 2018",
+    "id": 1016306872377196544,
+    "id_str": "1016306872377196544",
+    "text": "@0verfit snapshotを作成(左の画像)した後に、instance作成時にブートディスクを「変更」(左の画像)してsnapshotを指定すると全く同じ環境になります https://t.co/caoUMK8PQS",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "0verfit",
+          "name": "onodera",
+          "id": 3246429865,
+          "id_str": "3246429865",
+          "indices": [
+            0,
+            8
+          ]
+        }
+      ],
+      "urls": [],
+      "media": [
+        {
+          "id": 1016306568793473025,
+          "id_str": "1016306568793473025",
+          "indices": [
+            89,
+            112
+          ],
+          "media_url": "http://pbs.twimg.com/media/DhqlcI_UwAETwRs.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/DhqlcI_UwAETwRs.jpg",
+          "url": "https://t.co/caoUMK8PQS",
+          "display_url": "pic.twitter.com/caoUMK8PQS",
+          "expanded_url": "https://twitter.com/mamas16k/status/1016306872377196544/photo/1",
+          "type": "photo",
+          "sizes": {
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "large": {
+              "w": 2048,
+              "h": 884,
+              "resize": "fit"
+            },
+            "small": {
+              "w": 680,
+              "h": 294,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 1200,
+              "h": 518,
+              "resize": "fit"
+            }
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "id": 1016306568793473025,
+          "id_str": "1016306568793473025",
+          "indices": [
+            89,
+            112
+          ],
+          "media_url": "http://pbs.twimg.com/media/DhqlcI_UwAETwRs.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/DhqlcI_UwAETwRs.jpg",
+          "url": "https://t.co/caoUMK8PQS",
+          "display_url": "pic.twitter.com/caoUMK8PQS",
+          "expanded_url": "https://twitter.com/mamas16k/status/1016306872377196544/photo/1",
+          "type": "photo",
+          "sizes": {
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "large": {
+              "w": 2048,
+              "h": 884,
+              "resize": "fit"
+            },
+            "small": {
+              "w": 680,
+              "h": 294,
+              "resize": "fit"
+            },
+            "medium": {
+              "w": 1200,
+              "h": 518,
+              "resize": "fit"
+            }
+          }
+        },
+        {
+          "id": 1016306575730831361,
+          "id_str": "1016306575730831361",
+          "indices": [
+            89,
+            112
+          ],
+          "media_url": "http://pbs.twimg.com/media/Dhqlci1UcAEAS53.jpg",
+          "media_url_https": "https://pbs.twimg.com/media/Dhqlci1UcAEAS53.jpg",
+          "url": "https://t.co/caoUMK8PQS",
+          "display_url": "pic.twitter.com/caoUMK8PQS",
+          "expanded_url": "https://twitter.com/mamas16k/status/1016306872377196544/photo/1",
+          "type": "photo",
+          "sizes": {
+            "large": {
+              "w": 1746,
+              "h": 800,
+              "resize": "fit"
+            },
+            "thumb": {
+              "w": 150,
+              "h": 150,
+              "resize": "crop"
+            },
+            "medium": {
+              "w": 1200,
+              "h": 550,
+              "resize": "fit"
+            },
+            "small": {
+              "w": 680,
+              "h": 312,
+              "resize": "fit"
+            }
+          }
+        }
+      ]
+    },
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+    "in_reply_to_status_id": 1016305573170515969,
+    "in_reply_to_status_id_str": "1016305573170515969",
+    "in_reply_to_user_id": 232104486,
+    "in_reply_to_user_id_str": "232104486",
+    "in_reply_to_screen_name": "mamas16k",
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 0,
+    "favorite_count": 5,
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "ja"
+  },
+  "contributors_enabled": false,
+  "is_translator": false,
+  "is_translation_enabled": false,
+  "profile_background_color": "C0DEED",
+  "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+  "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+  "profile_background_tile": false,
+  "profile_image_url": "http://pbs.twimg.com/profile_images/932954071245262848/AGEE7L0r_normal.jpg",
+  "profile_image_url_https": "https://pbs.twimg.com/profile_images/932954071245262848/AGEE7L0r_normal.jpg",
+  "profile_link_color": "1DA1F2",
+  "profile_sidebar_border_color": "C0DEED",
+  "profile_sidebar_fill_color": "DDEEF6",
+  "profile_text_color": "333333",
+  "profile_use_background_image": true,
+  "has_extended_profile": false,
+  "default_profile": true,
+  "default_profile_image": false,
+  "following": true,
+  "follow_request_sent": false,
+  "notifications": false,
+  "translator_type": "none"
+}

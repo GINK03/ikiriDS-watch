@@ -1,0 +1,101 @@
+{
+  "id": 897535298246135808,
+  "id_str": "897535298246135808",
+  "name": "あきやま",
+  "screen_name": "ak_iyama",
+  "location": "Japan",
+  "description": "頭の悪いkaggler / Kaggle Expert / マスターまであと少し！！(あと少しとは言っていない) / KDDCUP2015 6th Place / F/R/Bご自由に！",
+  "url": "https://t.co/aeW4lFeXBU",
+  "entities": {
+    "url": {
+      "urls": [
+        {
+          "url": "https://t.co/aeW4lFeXBU",
+          "expanded_url": "https://www.kaggle.com/mtfall",
+          "display_url": "kaggle.com/mtfall",
+          "indices": [
+            0,
+            23
+          ]
+        }
+      ]
+    },
+    "description": {
+      "urls": []
+    }
+  },
+  "protected": false,
+  "followers_count": 355,
+  "friends_count": 207,
+  "listed_count": 12,
+  "created_at": "Tue Aug 15 19:07:45 +0000 2017",
+  "favourites_count": 826,
+  "utc_offset": null,
+  "time_zone": null,
+  "geo_enabled": false,
+  "verified": false,
+  "statuses_count": 492,
+  "lang": "ja",
+  "status": {
+    "created_at": "Fri Jul 06 13:32:13 +0000 2018",
+    "id": 1015226915811045376,
+    "id_str": "1015226915811045376",
+    "text": "@Maxwell_110 夜のディープラーニング...激しい畳み込み...",
+    "truncated": false,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [
+        {
+          "screen_name": "Maxwell_110",
+          "name": "HoxoMaxwell",
+          "id": 556836248,
+          "id_str": "556836248",
+          "indices": [
+            0,
+            12
+          ]
+        }
+      ],
+      "urls": []
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": 1015226202091503616,
+    "in_reply_to_status_id_str": "1015226202091503616",
+    "in_reply_to_user_id": 556836248,
+    "in_reply_to_user_id_str": "556836248",
+    "in_reply_to_screen_name": "Maxwell_110",
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 2,
+    "favorite_count": 7,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "ja"
+  },
+  "contributors_enabled": false,
+  "is_translator": false,
+  "is_translation_enabled": false,
+  "profile_background_color": "000000",
+  "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+  "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+  "profile_background_tile": false,
+  "profile_image_url": "http://pbs.twimg.com/profile_images/999243835187187712/eLXNEnvm_normal.jpg",
+  "profile_image_url_https": "https://pbs.twimg.com/profile_images/999243835187187712/eLXNEnvm_normal.jpg",
+  "profile_banner_url": "https://pbs.twimg.com/profile_banners/897535298246135808/1527120187",
+  "profile_link_color": "FAB81E",
+  "profile_sidebar_border_color": "000000",
+  "profile_sidebar_fill_color": "000000",
+  "profile_text_color": "000000",
+  "profile_use_background_image": false,
+  "has_extended_profile": false,
+  "default_profile": false,
+  "default_profile_image": false,
+  "following": true,
+  "follow_request_sent": false,
+  "notifications": false,
+  "translator_type": "none"
+}

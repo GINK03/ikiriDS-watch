@@ -15,15 +15,15 @@ m = MeCab.Tagger('-Owakati')
 NGs = json.load(fp=open('vocab_filter/vocs.json'))
 [ NGs.append(x) for x in ['kaggler', 'master', 'アウストラロピテクス', '人間', 'クソ', 'ザコ'] ]
 NGs = set(NGs)
-
+print(NGs)
 def checker(triples):
   '''format rules
   https://twitter.com/nardtree/status/1006325372307161089 が直URLで、username + idで構成されている
   '''
   url = os.environ['SLACK_WEBHOOK_01']
   for name, create_at, text, tweetid in triples:
-    if len( set(m.parse(text).strip()) & NGs ) >= 1 :
-      swords = str( set(m.parse(text).strip()) & NGs )
+    if len( set(m.parse(text).strip().split()) & NGs ) >= 1 :
+      swords = str( set(m.parse(text).strip().split()) & NGs )
       context = f'''{name} sanが、{create_at} \n センシティブワードは{swords}です \n https://twitter.com/{name}/status/{tweetid}'''
       payload = {'text':context, "channel": "#ikirids"}
       print( payload )
