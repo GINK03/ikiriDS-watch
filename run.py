@@ -13,7 +13,7 @@ import MeCab
 
 m = MeCab.Tagger('-Owakati')
 NGs = json.load(fp=open('vocab_filter/vocs.json'))
-[ NGs.append(x) for x in ['何かのイキリ語', 'クソ', 'ザコ'] ]
+[ NGs.append(x) for x in ['kaggler', 'master', 'アウストラロピテクス', '人間', 'クソ', 'ザコ'] ]
 NGs = set(NGs)
 
 def checker(triples):
