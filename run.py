@@ -1,3 +1,4 @@
+#!/usr/bin/env python3.6
 import tweepy
 import json
 import pprint
@@ -10,12 +11,13 @@ import schedule
 import os
 import requests
 import MeCab 
+import sys
 
 m = MeCab.Tagger('-Owakati')
-NGs = json.load(fp=open('vocab_filter/vocs.json'))
+NGs = json.load(fp=open('/home/watch/ikiriDS-watch/vocab_filter/vocs.json'))
 [ NGs.append(x) for x in ['kaggler', 'master', 'アウストラロピテクス', '人間', 'クソ', 'ザコ'] ]
 NGs = set(NGs)
-print(NGs)
+#print(NGs)
 def checker(triples):
   '''format rules
   https://twitter.com/nardtree/status/1006325372307161089 が直URLで、username + idで構成されている
@@ -26,8 +28,8 @@ def checker(triples):
       swords = str( set(m.parse(text).strip().split()) & NGs )
       context = f'''{name} sanが、{create_at} \n センシティブワードは{swords}です \n https://twitter.com/{name}/status/{tweetid}'''
       payload = {'text':context, "channel": "#ikirids"}
-      print( payload )
-      print( text )
+      #print( payload )
+      #print( text )
       requests.post(url, data=json.dumps(payload) )
 
 def runner():
@@ -51,14 +53,14 @@ def runner():
 
       with Path(f'logs/{key}').open('w') as f:
         f.write( serialized ) 
-      print( name, create_at, text )
+      #print( name, create_at, text )
       quads.append( (name, create_at, text, tweetid) )
     checker( quads )
   except Exception as ex:
     print(ex)
     return
 
-if __name__ == '__main__':
+def main_unit():
     api_key = os.environ['TWITTER_API']
     api_sec = os.environ['TWITTER_API_SEC']
     access_token = os.environ['TWITTER_ACCESS_TOKEN']
@@ -74,3 +76,16 @@ if __name__ == '__main__':
       schedule.run_pending()
       time.sleep(1)
 
+def daemonize():
+    pid = os.fork()#ここでプロセスをforkする
+    if pid > 0:#親プロセスの場合(pidは子プロセスのプロセスID)
+        #pid_file = open('/var/run/python_daemon.pid','w')
+        #pid_file.write(str(pid)+"\n")
+        #pid_file.close()
+        sys.exit()
+    if pid == 0:#子プロセスの場合
+        main_unit()
+
+if __name__ == '__main__':
+    while True:
+        daemonize()

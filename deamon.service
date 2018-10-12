@@ -1,0 +1,14 @@
+[Unit]
+Description=My Daemon
+
+[Service]
+ExecStart=/home/watch/ikiriDS-watch/run.py
+#ExecStop=/bin/kill ${MAINPID}
+Restart=always
+Type=forking
+User=watch
+Group=watch
+EnvironmentFile=/etc/secret
+
+[Install]
+WantedBy=multi-user.target
