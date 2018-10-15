@@ -2,12 +2,14 @@
 Description=My Daemon
 
 [Service]
-ExecStart=/home/watch/ikiriDS-watch/run.py
+ExecStart=/bin/bash /home/watch/ikiriDS-watch/run.sh
 #ExecStop=/bin/kill ${MAINPID}
 Restart=always
-Type=forking
+Type=simple
 User=watch
-Group=watch
+TimeoutSec=300
+WorkingDirectory=/home/watch/ikiriDS-watch
+#Group=watch
 EnvironmentFile=/etc/secret
 
 [Install]
